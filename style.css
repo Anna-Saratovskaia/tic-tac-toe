@@ -1,0 +1,54 @@
+:root {
+  --color: rgb(214, 162, 66);
+  --winning-blocks: rgb(28, 80, 30);
+  --background-color: rgb(4, 81, 83);
+}
+
+html {
+  color: var(--color);
+}
+body {
+  background-color: var(--background-color);
+}
+
+.content {
+  padding: 50px;
+  margin: 0 auto;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 75px);
+}
+
+.cell {
+  width: 75px;
+  height: 75px;
+  border-right: solid 2px var(--color);
+  border-bottom: solid 2px var(--color);
+}
+
+.cell:nth-child(3n) {
+  border-right: none;
+}
+
+.cell:nth-child(6) ~ .cell {
+  border-bottom: none;
+}
+
+button {
+  font-size: 20px;
+
+  border: none;
+  background-color: var(--color);
+  color: rgb(4, 81, 83);
+  height: 50px;
+  width: 200px;
+  border-radius: 5px;
+  transition: 500ms transform;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+}
